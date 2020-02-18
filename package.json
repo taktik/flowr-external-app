@@ -36,6 +36,84 @@
 			"dataType": "STRING",
 			"mandatory": true,
 			"defaultValue": ""
+		},
+		{
+			"label": "please fill this number",
+			"variableName": "numberExample",
+			"dataType": "NUMBER",
+			"mandatory": false,
+			"defaultValue": "0"
+		},
+		{
+			"label": "please fill this boolean",
+			"variableName": "booleanExample",
+			"dataType": "BOOLEAN",
+			"mandatory": true,
+			"defaultValue": "true"
+		},
+		{
+			"label": "please fill this textarea",
+			"variableName": "textExample",
+			"dataType": "TEXTAREA",
+			"mandatory": true,
+			"defaultValue": "\"this is the default value but a bit longer because it is a text area\""
+		},
+		{
+			"label": "please fill this dropdown",
+			"variableName": "dropdownExample",
+			"dataType": "DROPDOWN",
+			"mandatory": true,
+			"defaultValue": "\"option2\"",
+			"possibleValues": ["option1", "option2", "option3"]
+		},
+		{
+			"label": "please fill this color",
+			"variableName": "colorExample",
+			"dataType": "COLOR",
+			"mandatory": true,
+			"defaultValue": "{\"name\":\"alizarin\",\"value\":\"#e74c3c\"}"
+		},
+		{
+			"label": "please fill this font size",
+			"variableName": "fontSizeExample",
+			"dataType": "FONT_SIZE",
+			"mandatory": true,
+			"defaultValue": "\"16em\""
+		},
+		{
+			"label": "please fill this border",
+			"variableName": "borderExample",
+			"dataType": "BORDER",
+			"mandatory": true,
+			"defaultValue": "{\"border-color\":{\"name\":\"lightGray\",\"value\":\"#d3d3d3\"},\"border-width\":\"18\",\"border-radius\":\"19\",\"border-style\":\"solid\"}"
+		},
+		{
+			"label": "please fill this line height",
+			"variableName": "lineHeightExample",
+			"dataType": "LINE_HEIGHT",
+			"mandatory": true,
+			"defaultValue": "\"1.3\""
+		},
+		{
+			"label": "please fill this shadow",
+			"variableName": "shadowExample",
+			"dataType": "SHADOW",
+			"mandatory": true,
+			"defaultValue": "[{\"x\":\"1em\",\"y\":\"2em\",\"blur\":\"3em\",\"spread\":\"4em\",\"color\":{\"name\":\"emerald\",\"value\":\"#2ecc71\"},\"inset\":true},{\"x\":\"\",\"y\":\"\",\"blur\":\"\",\"spread\":\"\",\"color\":null,\"inset\":false}]"
+		},
+		{
+			"label": "please fill this scene reference",
+			"variableName": "sceneExample",
+			"dataType": "SCENE_REFERENCE",
+			"mandatory": true,
+			"defaultValue": "\"7513d97f-243e-470e-8005-4369e94e71ae\""
+		},
+		{
+			"label": "please fill this layer reference",
+			"variableName": "layerExample",
+			"dataType": "LAYER_REFERENCE",
+			"mandatory": true,
+			"defaultValue": "\"97a653e0-75c2-47ad-9954-21676605d8f9\""
 		}
 	]
 }
