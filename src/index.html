@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template app</title>
+</head>
+<body style="">
+<div id="app"></div>
+<script src="script.js"></script>
+<script>
+    window.eventManager = {
+        on: function(ks, act, context) {
+            (window.eventsLibrary || (window.eventsLibrary = {}))[ks] = {'act':act, 'context': context }
+        }
+    }
+    window.customAppServices = {
+        errorHandler: function (severity) {
+            switch (severity) {
+                case 'INVALID_DATA':
+                    console.log('Invalid_data')
+                    break
+                default:
+                    console.log('Fatal error')
+            }
+        }
+    }
+    var params = {
+        target: document.getElementById('app'),
+        appLayer: window.eventManager,
+        customAppServices: window.customAppServices,
+        options: {
+            applicationConfigValues: {
+                valueFromAdmin: 'Hey from admin'
+            },
+            location: "Romm Z",
+            subLocation: "Room Y",
+            device: {
+                id: "kjdfqpo-lkijfoeh-dfzfz"
+            }
+        }
+    }
+
+    entry(params)
+    document.addEventListener('keyup', function(e) {
+            var eventName = handleKey(e.keyCode)
+            window.eventsLibrary && window.eventsLibrary[eventName].act.apply(window.eventsLibrary[eventName].context)
+        }
+    )
+    function handleKey(e) {
+        switch (e) {
+            case 13:
+                return 'enterPress'
+            case 38:
+                return 'arrowUpPress'
+            case 39:
+                return 'arrowRightPress'
+            case 37:
+                return 'arrowLeftPress'
+            case 40:
+                return 'arrowDownPress'
+            case 8:
+                return 'returnPress'
+            case 75:
+                return 'channelPlusPress'
+            case 74:
+                return 'channelMinusPress'
+            default:
+                return 'badKey'
+        }
+    }
+</script>
+</body>
+</html>

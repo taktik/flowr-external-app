@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"alwaysShowRuleFailuresAsWarnings": false,
+				"ignoreDefinitionFiles": true,
+				"configFile": "./tslint.json",
+				"suppressWhileTypeErrorsPresent": false,
+				"mockTypeScriptVersion": false
+			}
+		],
+		"sourceMap": true,
+		"target": "esnext",
+		"lib": [ "es2015", "dom" ]
+	}
+}
